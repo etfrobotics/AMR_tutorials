@@ -1,6 +1,6 @@
-# Installing ROS Noetic on Ubuntu 20.04 using VirtualBox (on Windows)
+# Instaliraj ROS Noetic na Ubuntu 20.04 koristeći VirtualBox (na Windows)
 
-This guide will aid you in setting up Ubuntu on a virtual machine (on a Windows PC/Laptop) and install ROS on it. While installing ROS on a virtual machine is suitable for teaching and learning purposes, however, it is recommended to dual boot your computer for development.
+Ovaj vodič će vam pomoći da podesite Ubuntu na virtuelnoj mašini (na Windows PC/laptop) i instalirate ROS na nju. Iako je instaliranje ROS-a na virtuelnu mašinu pogodno za nastavu i učenje, međutim, preporučuje se Dual boot instalacija za napredno korišćenje.
 
 - Ubuntu Version: 20.04 LTS Focal Fossa
 
@@ -14,147 +14,147 @@ This guide will aid you in setting up Ubuntu on a virtual machine (on a Windows 
 
 ## Steps
 
-1. [Install VirtualBox](#1-Installing-Virtualbox)
-2. [Download Ubuntu ISO](#2-Download-Ubuntu-ISO)
-3. [Create Virtual Machine](#3-Create-Virtual-Machine)
-4. [Install Ubuntu](#4-Install-Ubuntu)
-5. [Installing ROS on Ubuntu](#5-Installing-ROS-on-Ubuntu)
+1. [Instalacija VirtualBox](#1-Instalacija-Virtualbox)
+2. [Preuzimanje Ubuntu ISO](#2-Preuzimawe-Ubuntu-ISO)
+3. [Kreiranje Virtualne Mašine](#3-Kreiranje-Virtualne-Mašine)
+4. [Instaliraj Ubuntu](#4-Instaliraj-Ubuntu)
+5. [Instaliraj ROS na Ubuntu](#5-Instaliraj-ROS-na-Ubuntu)
 
-## 1. Installing VirtualBox
+## 1. Instaliraj VirtualBox
 
-1. Download VirtualBox for **Windows Host** [here](https://www.virtualbox.org/wiki/Downloads) (Version number might be different).
+1. Preuzeti VirtualBox za **Windows Host** [ovde](https://www.virtualbox.org/wiki/Downloads) (Verzija može biti drugačija).
 
    ![virtualbox_download](media/vbox_download.png)
 
-2. Run the .exe file and install VirtualBox.
+2. Pokrenuti .exe fajl i instalirati VirtualBox.
 
-## 2. Download Ubuntu ISO
+## 2. Preuzeti Ubuntu ISO
 
-1. Download Ubuntu ISO [here](https://ubuntu.com/download/desktop).
+1. Preuzeti Ubuntu ISO [ovde](https://ubuntu.com/download/desktop).
 
    ![ubuntu download](media/ubuntu_download.png)
 
-   > Download may take a while as the file size for Ubuntu 20.04.2.0 LTS is 2.7GB.
+   > Preuzimanje može potrajati nekoliko minuta sobzirom da je fajl Ubuntu 20.04.2.0 LTS veličine 2.7GB.
 
-## 3. Create Virtual Machine
+## 3. Kreiraj Virtuelnu Mašinu
 
-1. Open VirtualBox.
+1. Otvoriti VirtualBox.
 
-2. Create a new virtual machine by clicking on the `New` icon or going to `Machine > New`.
+2. Kreirati novu virtuelnu mašinu klikom na `New` ikonu ili  `Machine > New`.
 
    ![create_vm](media/create_new.png)
    
-3. Enter `Ubuntu` as the name. Type and Version should be automatically filled for you, if not, set Type to `Linux` and Version to `Ubuntu (64-bit)`. Click `Next`.
+3. Uneti `Ubuntu` kao ime. Polja tip i verzija će automatski biti popunjena, ako ne, podesiti tip na `Linux` i verziju na `Ubuntu (64-bit)`. Kliknuti na `Next`.
 
    ![vm name](media/vm_name.png)
 
-4. Increase the memory size to `6144MB` (6GB). If `6144MB` is within the orange or red zone, use a memory size of `4096MB` instead. Click `Next`.
+4. Povećati memoriju na `6144MB` (6GB). Ako je `6144MB` u narandžastoj ili crvenoj zoni, podesiti memoriju na `4096MB`. Kliknuti na `Next`.
 
    ![ram size](media/ram.png)
 
-5. Select `Create a virtual hard disk now` and click `Create`.
+5. Selektovati `Create a virtual hard disk now` i kliknuti na `Create`.
 
    ![create hard disk](media/hard_disk.png)
 
-6. Select `VDI (VirtualBox Disk Image)` and click `Next`.
+6. Selektovati `VDI (VirtualBox Disk Image)` i kliknuti `Next`.
 
    ![hard disk type](media/hard_disk_type.png)
 
-   1. Select `Dynamically allocated` and click `Next`.
+   1. Selektovati `Dynamically allocated` i kliknuti `Next`.
 
    ![dynamically allocated](media/dynamic.png)
 
-7. Change the hard disk size to `35.00GB`. You may change the location where the disk image is saved at but it is alright to leave it as the default. Click `Create`.
+7. Promeniti veličinu hard diska na `35.00GB`. Moguće je podesiti lokaciju gde će se virtuelni hard disk sačuvati, za sada može ostati kako je inicijalno podešeno. Kliknuti na `Create`.
 
    ![hard disk size](media/hard_disk_size.png)
 
-8. Right-click on the newly created virtual machine and click `Settings`. Alternatively single left-click the virtual machine and go to `Machine > Settings`. 
+8. Kliknuti desnim klikom na novo kreiranu virtuelnu mašinu i kliknuti `Settings`. Alternativno kliknuti jednom levim klikom na virtuelnu mašinu i otići na `Machine > Settings`. 
 
    ![virtualbox main screen](media/right_click.png)
 
-9. Navigate to `Storage` on the left-hand menu and select the `Storage` tab. Click on the line with the CD. On the right, under `Optical Drive`, click on the CD icon with the down arrow and select `Choose a disk file...`. Navigate to the earlier downloaded Ubuntu ISO.
+9. Naći `Storage` na meniju sa leve strane i selektovati `Storage` tab. Kliknuti na liniju sa ikonicom CDa. Sa desne strane, u okviru `Optical Drive`, kliknuti na CD ikonu sa strelicom na dole i selektovati `Choose a disk file...`. Pronaći prethodno preuzet Ubuntu ISO fajl.
 
   ![folder icon](media/startup_alternative.png)
 
-10. Navigate to `System` on the left-hand menu and select the `Processor` tab. Increase the slider until the end of the green zone, which may be different as compared to the diagram below.
+10. Naći `System` sa leve strane naći  `Processor` tab. Povećati vrednost na slajderu do granice zelene zone.
 
     ![settings](media/settings.png)
 
-## 4. Install Ubuntu
+## 4. Instaliraj Ubuntu
 
-1. Double click on the newly created virtual machine.
+1. Kliknuti duplim klikom na novo kreiranu virtuelnu mašinu.
 
    ![main screen](media/main_screen.png)
 
-   > The virtual machine will start to boot
+   > Vrtualna mašina će početi da se pokreće.
 
-2. Wait while the virtual machine to checks the disk.
+2. Sačekati dok virtualna mašina izvrši proveru diska.
 
    ![check disk](media/check_disk.png)
 
-3. Select `Install Ubuntu`.
+3. Selektovati `Install Ubuntu`.
 
    ![install ubuntu](media/install.png)
 
-4. Choose your keyboard layout as `English (US)`. Click `Continue`.
+4. Izabrati postavke tastature na `English (US)`. Kliknuti `Continue`.
 
    ![keyboard layout](media/keyboard_layout.png)
 
-5. Select `Minimal installation`, `Download updates while installing Ubuntu` and `Install third-party software for graphics and Wi-Fi hardware and additional media formats`. Click `Continue`.
+5. Selektovati `Minimal installation`, `Download updates while installing Ubuntu` i `Install third-party software for graphics and Wi-Fi hardware and additional media formats`. Klinkuti `Continue`.
 
    ![updates and other software](media/updates_and_software.png)
 
-6. Select `Erase disk and install Ubuntu`. Click `Install Now `and click `Continue` if a warning pops out.
+6. Selektovati `Erase disk and install Ubuntu`. Kliknuti `Install Now `a zatim kliknuti na `Continue` ukoliko se pojavi upotorenje.
 
    ![erase disk](media/erase_disk.png)
 
-7. Select your country and click `Continue`.
+7. Izabrati zemlju/region i kliknuti `Continue`.
 
-8. Enter your personal details and click `Continue`.
+8. Uneti tražene informacije i kliknuti  `Continue`.
 
-9. Wait while Ubuntu installs. This may take a while.
+9. Sačekati dok se Ubuntu instalira. Ovaj korak može potrajati.
 
-10. Restart the VM. If prompted to remove the installation medium, just press enter.
+10. Restartovati VM. Ukoliko zatraži da se izbaci instalacioni CD, samo pritisnuti enter.
 
     ![restart](media/restart.png)
 
-11. Congratulations! You've successfully installed Ubuntu on a virtual machine.
+11. Čestitamo! Uspešno ste instalirali Ubuntu na virtuelnoj mašini.
 
-## 5. Installing ROS on Ubuntu
+## 5. Instaliraj ROS na Ubuntu
 
-1. Follow the instructions found [here](http://wiki.ros.org/noetic/Installation/Ubuntu). For convenience, the commands have been listed below. If you encounter any errors or want to find out more, please go to the link to follow the full guide. Alternatively,
+1. Pratite informacije koje možete naći [ovde](http://wiki.ros.org/noetic/Installation/Ubuntu). Komande si ispisane ispod, radi lakšeg praćenja. Ukoliko naiđete na greške pogledajti informacije i detaljniji opis sa prethodnog linka.
 
-2. Open `Software & Updates` program by pressing the windows key and searching `Software & Updates`.
+2. Otvoriti `Software & Updates` program pritiskom na windows taster i pretražiti `Software & Updates`.
 
-3. Tick all boxes and click `Close`.
+3. Štiklirati sva polja i kliknuti na `Close`.
 
    ![software and updates](media/software_and_updates.png)
 
-4. Click `Reload`.
+4. Kliknuti `Reload`.
 
-5. Open a terminal window by pressing the windows key and searching `Terminal` or using the keyboard shortcut `Ctrl+Alt+T`.
+5. Otvoriti terminal pritiskom na windows taster i naći `Terminal` ili koristeći prečicu sa tastature `Ctrl+Alt+T`.
 
-6. Run the following commands sequentially. For convenience, you may want to install the [virtualbox guest additions](#6-install-virtualbox-guest-additions-optional) which will enable `Host to Guest` clipboard via `Devices > Shared Clipboard > Host to Guest `, allowing you to copy from Windows and paste in Ubuntu. Alternatively, you can navigate to this page on Firefox in the virtual machine to copy and paste the commands.
+6. Pokrenuti sledeće korake u datom redosledu.
 
-    > Commands adapted from http://wiki.ros.org/noetic/Installation/Ubuntu.
+    > Komande su preuzete i adaptirane sa http://wiki.ros.org/noetic/Installation/Ubuntu.
 
-    Set up sources.list
+    Podesiti sources.list
     
     ```
     sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
     ```
     
-    Set up keys
+    Podesiti keljučeve
     ```
     sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
     ```
     
-    Update Debian package index
+    Updejtovati Debian pakete
     ```
     sudo apt update
     ```
     
-    Install ROS Desktop-Full
+    Instalirati ROS Desktop-Full
     ```
     sudo apt install -y ros-noetic-desktop-full
     ```
@@ -165,7 +165,7 @@ This guide will aid you in setting up Ubuntu on a virtual machine (on a Windows 
     source ~/.bashrc
     ```
     
-    Install dependencies for building packages
+    Instalirati neoophodne bibljioteke za bildovanje paketa
     ```
     sudo apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
     ```
@@ -174,7 +174,7 @@ This guide will aid you in setting up Ubuntu on a virtual machine (on a Windows 
     rosdep update
     ```
     
-    Create a ROS Workspace
+    Kreirati ROS Workspace
     ```
     mkdir -p ~/catkin_ws/src
     cd ~/catkin_ws/
