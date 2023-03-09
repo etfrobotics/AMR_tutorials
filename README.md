@@ -186,3 +186,14 @@ Ovaj vodič će vam pomoći da podesite Ubuntu na virtuelnoj mašini (na Windo
     echo "source $(pwd)/devel/setup.bash" >> ~/.bashrc
     source ~/.bashrc
     ```
+    
+    ## Testiraj da li je ROS instaliran
+    
+    1. Otvoriti terminal i uneti sledeću komandu:
+    ```
+    roscore
+    ```
+    > Ukoliko je sve pokrenuto kako treba prikazaće se sledeća slika.
+    ![roscore](media/roscore.png)
+
+    
