@@ -45,3 +45,50 @@ Napomena: potrebno je pre pokretanja bilo koje skripte pokrenuti ***roscore***.
 Ukoliko je sve urađeno kako treba dobiće se sledeći prikaz:
 
 ![hello_world_pub_sub](hello_world_pub_sub.png)
+
+# Kreiranje servisa
+
+Za početak neophodno je kreirati folder ***srv** u kome će se nalaziti tip poruke za servis:
+```
+cd ~/catkin_ws/src/hello_world/
+mkdir srv
+touch add_value_file.srv
+```
+
+U fajl ***add_value_file.srv*** treba upisati sledeće:
+```
+int64 value
+---
+bool response
+```
+
+Nakon toga potrebno je u fajlu ***package.xml*** odkomentarisati sledeće dve linije:
+```
+<build_depend>message_generation</build_depend>
+<exec_depend>message_runtime</exec_depend>
+```
+
+Takođe u fajlu ***CMakeList.txt*** treba napraviti sledeće izmene. U skeciji ***find_package*** treba dodati ***message_generation***:
+```
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  message_generation
+)
+```
+Sekciju ***add_service_file*** treba odkomenatrisati i izmenizi zako da ima sledeći izgled:
+```
+add_service_files(
+  FILES
+  add_value_file.srv
+)
+```
+
+I na kraju potrebno je odkomentarisati sekciju ***generate_messages***
+```
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
+```
