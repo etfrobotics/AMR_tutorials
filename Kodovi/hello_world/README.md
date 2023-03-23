@@ -92,3 +92,46 @@ generate_messages(
   std_msgs
 )
 ```
+
+Sve promene potrebno je izbildovati:
+```
+cd ~/catkin_ws
+catkin_make
+```
+
+Kako bi se utvridlo da su sve promene dobro urađene možemo otkucati sledeću komandu u terminalu:
+```
+rossrv show hello_world/add_value_file
+```
+pri čemu bi trebalo da se dobije sledeći odgovor:
+
+![hello_world_srv](hell_world_srv.png)
+
+# Kreiranje server strane servisa
+
+Skriptu je potrebno kreirati u ***src*** folderu:
+```
+cd ~/catkin_ws/hello_world/src
+touch hello_world_service.py
+chmod +x hello_world_service.py
+```
+
+Zatim je može otkucati odgovarajući kod u skripti.
+
+# Pokretanje servisa
+
+Serversku stranu servisa pokrećemo kao i bilo koji drugi nod:
+```
+rosrun hello_world hello_world_service.py
+```
+
+## Pozivanje klijentske strane korz terminal
+
+U novom terminalu možemo otkucati sledeću komandu kako bismo poslali upit ka servisu:
+```
+rosservice call /add_value_file "value: 115"
+```
+
+Na sledećoj slici je prikazno kako izgleda odziv na prosleđen upti:
+
+![hello_world_srv1](hello_world_srv1.png)
