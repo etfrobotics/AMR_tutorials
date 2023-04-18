@@ -1,0 +1,4 @@
+float64 x_speed
+float64 angular_speed
+---
+bool move_done
