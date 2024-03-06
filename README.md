@@ -30,7 +30,7 @@ Ovaj vodič će vam pomoći da podesite Ubuntu na virtuelnoj mašini (na Windo
 
 ## 2. Preuzeti Ubuntu ISO
 
-1. Preuzeti Ubuntu ISO [ovde]([https://ubuntu.com/download/desktop](https://ubuntu.com/download/alternative-downloads).
+1. Preuzeti Ubuntu ISO [ovde]([[https://ubuntu.com/download/desktop](https://ubuntu.com/download/alternative-downloads]).
 
    ![ubuntu download](media/ubuntu_download.png)
 
