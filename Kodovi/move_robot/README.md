@@ -14,9 +14,10 @@ Komanda za instalaciju ROS paketa:
 
 Komanda za instalaciju TurtleBot3 paketa:
 ```
-$ sudo apt install ros-noetic-dynamixel-sdk
-$ sudo apt install ros-noetic-turtlebot3-msgs
-$ sudo apt install ros-noetic-turtlebot3
+sudo apt-get install ros-noetic-dynamixel-sdk
+sudo apt-get install ros-noetic-turtlebot3-msgs
+sudo apt-get install ros-noetic-turtlebot3
+sudo apt-get install ros-noetic-turtlebot3-simulations
 ```
 
 # Pokretnje simulacije
@@ -26,7 +27,7 @@ export TURTLEBOT3_MODEL=burger
 ```
 Sledećom komandom se pokreće Gazebo simulator:
 ```
-roslaunch turtlebot3_gazebo trutlebot3_world.launch
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
 
 U novom terminalu zatim se poziva program za kontrolu robota:
